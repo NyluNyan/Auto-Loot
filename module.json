@@ -1,0 +1,7 @@
+{
+    "author": "Nylu",
+    "description": "allows automatic looting of items",
+    "disableAutoUpdate": false,
+    "name": "Auto Loot",
+    "servers": ["https://raw.githubusercontent.com/NyluNyan/Auto-Loot/master/"]
+}
