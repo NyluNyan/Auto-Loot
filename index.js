@@ -154,6 +154,7 @@ module.exports = function AutoLoot(mod) {
 			mod.unhook(hooks[1]);
 			hooks = [];
 		}
+		loot = {};
 	}
 	
 	function dist3D(loc1, loc2) {
