@@ -69,18 +69,18 @@ module.exports = function AutoLoot(mod) {
 				var i = config.blacklist.indexOf(arg1);
 				if(!i && !isNaN(arg1))
 				{
-				if(isNaN(config.blacklist[i+1]))
-				{
-					mod.command.message('removed item id: ' + arg1 + ' with description: "' + config.blacklist[i+1] + '" from blacklist');
-					config.blacklist.splice(i, 2);
-				}
-				else
-				{
-					mod.command.message('removed item id: ' + arg1 + ' from blacklist');
-					config.blacklist.splice(i, 1);
-				}
-				i = blacklist.indexOf(arg1);
-				blacklist.splice(i, 1);
+					if(isNaN(config.blacklist[i+1]))
+					{
+						mod.command.message('removed item id: ' + arg1 + ' with description: "' + config.blacklist[i+1] + '" from blacklist');
+						config.blacklist.splice(i, 2);
+					}
+					else
+					{
+						mod.command.message('removed item id: ' + arg1 + ' from blacklist');
+						config.blacklist.splice(i, 1);
+					}
+					i = blacklist.indexOf(arg1);
+					blacklist.splice(i, 1);
 				}
 				else mod.command.message('id not found in blacklist');
 				break;
